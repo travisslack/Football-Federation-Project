@@ -5,7 +5,7 @@ class Club
 attr_reader :club_name, :id
 
   def initialize(options)
-    @club_name = options['name']
+    @club_name = options['club_name']
     @id = options['id'].to_i if options['id']
   end  
 

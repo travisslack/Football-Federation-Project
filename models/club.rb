@@ -15,10 +15,22 @@ attr_reader :club_name, :id
     @id = club[0]['id'].to_i
   end
 
+  def players
+    sql = "SELECT * FROM players WHERE club_id = #{@id};"
+    players = SqlRunner.run(sql)
+    return players.map { |player| Player.new(player)}
+  end
+  
   def self.all()
     sql = "SELECT * FROM clubs;"
     clubs = SqlRunner.run(sql)
     return clubs.map { |club| Club.new( club )}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM clubs WHERE id = #{id}"
+    club = SqlRunner.run(sql)
+    return Club.new(club[0])
   end
 
   def self.delete()

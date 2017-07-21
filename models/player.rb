@@ -8,6 +8,7 @@ attr_reader :first_name, :second_name, :age, :fit, :club_id
   def initialize(options)
     @first_name = options['first_name']
     @second_name = options['second_name']
+    @position = options['position']
     @age = options['age'].to_i
     @fit = options['fit']
     @club_id = options['club_id']
@@ -15,14 +16,21 @@ attr_reader :first_name, :second_name, :age, :fit, :club_id
   end
 
   def save()
-    sql = "INSERT INTO players (first_name, second_name, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', #{@age}, #{@fit}, #{@club_id}) RETURNING id;"
+    sql = "INSERT INTO players (first_name, second_name, position, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, #{@fit}, #{@club_id}) RETURNING id;"
     player = SqlRunner.run(sql)
     @id = player[0]['id'].to_i
   end
 
   def self.all()
     sql = "SELECT * FROM players;"
-    players = SqlRunner.map{ |player| Player.new( player )}
+    players = SqlRunner.run(sql)
+    return players.map{ |player| Player.new(player)}
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM players WHERE id = #{id}"
+    player = SqlRunner.run(sql)
+    return Player.new(player[0])
   end
 
   def self.delete()

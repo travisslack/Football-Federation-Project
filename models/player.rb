@@ -20,5 +20,15 @@ attr_reader :first_name, :second_name, :age, :fit, :club_id
     @id = player[0]['id'].to_i
   end
 
+  def self.all()
+    sql = "SELECT * FROM players;"
+    players = SqlRunner.map{ |player| Player.new( player )}
+  end
+
+  def self.delete()
+    sql = "DELETE FROM players;"
+    return SqlRunner.run(sql)
+  end
+
 
 end

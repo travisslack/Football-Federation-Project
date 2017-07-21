@@ -1,6 +1,8 @@
 require_relative('../models/club')
 require_relative('../models/player')
 
+Player.delete()
+Club.delete()
 club1 = Club.new({
   "club_name" => "Liverpool"
   })
@@ -17,10 +19,21 @@ club4 = Club.new({
   "club_name" => "Manchester City"
   })
 
+club5 = Club.new({
+  "club_name" => "Dundee"
+  })
+
+club6 = Club.new({
+  "club_name" => "AC Milan"
+  })
+
 club1.save
 club2.save
 club3.save
 club4.save
+club5.save
+club6.save
+
 
 player1 = Player.new({
   "first_name" => "Paulo",

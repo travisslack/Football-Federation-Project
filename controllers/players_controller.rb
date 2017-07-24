@@ -26,6 +26,7 @@ end
 
 get '/players/:id/edit' do
   @player = Player.find(params[:id])
+  @clubs = Club.all
   erb(:"/players/edit")
 end
 

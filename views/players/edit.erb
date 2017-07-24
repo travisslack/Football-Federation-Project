@@ -16,31 +16,10 @@
   />
 
   <label for="team-selection">Select a team:</label>
-  <select name="club_name" id="team-selection">
-    <option
-    value="Liverpool"
-    <%= "selected" if @club_id == "Liverpool" %>
-    >Liverpool</option>
-    <option
-    value="Chelsea"
-    <%= "selected" if @club_id == "Chelsea" %>
-    >Chelsea</option>
-    <option
-    value="Manchester United"
-    <%= "selected" if @club_id == "Manchester United" %>
-    >Manchester United</option>
-    <option
-    value="Manchester City"
-    <%= "selected" if @club_id == "Manchester City" %>
-    >Manchester City</option>
-    <option
-    value="AC Milan"
-    <%= "selected" if @club_id == "AC Milan" %>
-    >AC Milan</option>
-    <option
-    value="Dundee"
-    <%= "selected" if @club_id == "Dundee" %>
-    >Dundee</option>
+  <select name="club_id" id="team-selection">
+    <% for club in @clubs %>
+    <option value="<%= club.id %>" <%="selected" if @player.club_id == club.id %>><%= club.club_name %></option>
+    <% end %>
   </select>
 
   <label for="age">Age:</label>

@@ -13,7 +13,7 @@ attr_reader :id
     @position = options['position']
     @age = options['age'].to_i
     @fit = options['fit']
-    @club_id = options['club_id']
+    @club_id = options['club_id'].to_i
     @id = options['id'].to_i if options['id']
   end
 
@@ -24,6 +24,7 @@ attr_reader :id
   end
 
   def update()
+    binding.pry
     sql = "UPDATE players SET (first_name, second_name, position, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', #{@club_id}) WHERE id = #{@id};"
     SqlRunner.run(sql)
   end

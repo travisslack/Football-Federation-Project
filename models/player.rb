@@ -18,7 +18,7 @@ attr_reader :id
   end
 
   def save()
-    sql = "INSERT INTO players (first_name, second_name, position, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, #{@fit}, #{@club_id}) RETURNING id;"
+    sql = "INSERT INTO players (first_name, second_name, position, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', #{@club_id}) RETURNING id;"
     player = SqlRunner.run(sql)
     @id = player[0]['id'].to_i
   end
@@ -43,5 +43,12 @@ attr_reader :id
     sql = "DELETE FROM players;"
     return SqlRunner.run(sql)
   end
+
+  def self.destroy(id)
+    sql = "DELETE FROM players"
+    values = [id]
+    SqlRunner.run( sql, values )
+  end
+
 
 end

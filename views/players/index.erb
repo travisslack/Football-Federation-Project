@@ -18,5 +18,10 @@
     <td><%= player.club_id %></td>
     <td><%= player.position %></td
   </tr>
+  <p>
+    <form action="/players/<%= player.id %>/delete" method="POST">
+      <input class="btn btn--danger" type="submit" value="delete" />
+    </form>
+  </p>
   <% end %>
 </table>

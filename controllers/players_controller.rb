@@ -8,5 +8,17 @@ get '/players' do
 end
 
 get '/players/new' do
+  @clubs = Club.all()
   erb(:"players/new")
+end
+
+post '/players' do
+  player = Player.new(params)
+  player.save
+  redirect to("/players")
+end
+
+post '/players/:id/delete' do
+  Player.destroy(params[:id])
+  redirect to("/players")
 end

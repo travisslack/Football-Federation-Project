@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require_relative( '../models/club.rb' )
+require('pry')
 
 get '/players' do
   @players = Player.all()
@@ -22,3 +23,16 @@ post '/players/:id/delete' do
   Player.destroy(params[:id])
   redirect to("/players")
 end
+
+get '/players/:id/edit' do
+  @player = Player.find(params[:id])
+  erb(:"/players/edit")
+end
+
+post '/players/:id' do
+  player = Player.new(params)
+  player.update
+  redirect to("/players")
+end
+
+

@@ -12,17 +12,25 @@
   </tr>
   <tr>
     <th>First Name</th>
+    <td>|</td>
     <th>Second Name</th>
+    <td>|</td>
     <th>Age</th>
+    <td>|</td>
     <th>Fit?</th>
+    <td>|</td>
     <th>positon</th>
   </tr>
     <% for player in @players %>
     <tr>
       <td><%= player.first_name %></td>
+      <td>|</td>
       <td><%= player.second_name %></td>
+      <td>|</td>
       <td><%= player.age %></td>
+      <td>|</td>
       <td><%= player.fit %></td>
+      <td>|</td>
       <td><%= player.position %></td>
     </tr>
     <% end %>

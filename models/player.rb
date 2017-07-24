@@ -23,6 +23,11 @@ attr_reader :id
     @id = player[0]['id'].to_i
   end
 
+  def update()
+    sql = "UPDATE players SET (first_name, second_name, position, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', #{@club_id}) WHERE id = #{@id};"
+    SqlRunner.run(sql)
+  end
+
   def self.all()
     sql = "SELECT * FROM players;"
     players = SqlRunner.run(sql)
@@ -39,15 +44,15 @@ attr_reader :id
     return Club.find(@club_id)
   end
 
-  def self.delete()
+  def self.delete_all()
     sql = "DELETE FROM players;"
-    return SqlRunner.run(sql)
+    SqlRunner.run(sql)
   end
 
   def self.destroy(id)
-    sql = "DELETE FROM players"
-    values = [id]
-    SqlRunner.run( sql, values )
+    sql = "DELETE FROM players 
+    WHERE id = #{id};"
+    SqlRunner.run( sql )
   end
 
 

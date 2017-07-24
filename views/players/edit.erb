@@ -1,0 +1,71 @@
+<form method="post" action="/players/<%= @player.id %>">
+  <label for="first-name-field">First Name:</label>
+  <input
+  type="text"
+  name="first_name"
+  id="first-name-field"
+  value="<%= @player.first_name %>"
+  />
+
+  <label for="second-name-field">Second Name:</label>
+  <input
+  type="text"
+  name="second_name"
+  id="second-name-field"
+  value="<%= @player.second_name %>"
+  />
+
+  <label for="team-selection">Select a team:</label>
+  <select name="club_name" id="team-selection">
+    <option
+    value="Liverpool"
+    <%= "selected" if @club_id == "Liverpool" %>
+    >Liverpool</option>
+    <option
+    value="Chelsea"
+    <%= "selected" if @club_id == "Chelsea" %>
+    >Chelsea</option>
+    <option
+    value="Manchester United"
+    <%= "selected" if @club_id == "Manchester United" %>
+    >Manchester United</option>
+    <option
+    value="Manchester City"
+    <%= "selected" if @club_id == "Manchester City" %>
+    >Manchester City</option>
+    <option
+    value="AC Milan"
+    <%= "selected" if @club_id == "AC Milan" %>
+    >AC Milan</option>
+    <option
+    value="Dundee"
+    <%= "selected" if @club_id == "Dundee" %>
+    >Dundee</option>
+  </select>
+
+  <label for="age">Age:</label>
+  <input 
+  type="number"
+  name="age"
+  id="age"
+  value="<%= @player.age %>"
+  /> 
+
+  <label for="position_field">Position:</label>
+  <input 
+  type="text"
+  name="position"
+  id="position_field"
+  value="<%= @player.position %>"
+  /> 
+
+  <label for="fit">Fit?:</label>
+  <input 
+  type="boolean"
+  name="fit"
+  id="fit"
+  value="<%= @player.fit %>"
+  /> 
+
+  <input type='submit' value="Edit Player">
+</form>

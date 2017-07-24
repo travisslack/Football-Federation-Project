@@ -3,25 +3,41 @@
 <table>
   <tr>
     <th>First Name</th>
+    <td>|</td>
     <th>Second Name</th>
+    <td>|</td>
     <th>Age</th>
+    <td>|</td>
     <th>Fit?</th>
+    <td>|</td>
     <th>Club</th>
+    <td>|</td>
     <th>Positon</th>
   </tr>
   <% for player in @players %>
   <tr>
     <td><%= player.first_name %></td>
+    <td>|</td>
     <td><%= player.second_name %></td>
+    <td>|</td>
     <td><%= player.age %></td>
+    <td>|</td>
     <td><%= player.fit %></td>
+    <td>|</td>
     <td><%= player.club_id %></td>
-    <td><%= player.position %></td
+    <td>|</td>
+    <td><%= player.position %></td>
+    <td>
+      <form action="/players/<%= player.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </td>
+    <td>
+      <form action="/players/<%= player.id %>/edit" method="get">
+        <input class="btn btn--danger" type="submit" value="Edit" />
+      </form>
+    </td>
   </tr>
-  <p>
-    <form action="/players/<%= player.id %>/delete" method="POST">
-      <input class="btn btn--danger" type="submit" value="delete" />
-    </form>
-  </p>
+  
   <% end %>
 </table>

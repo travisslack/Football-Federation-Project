@@ -2,8 +2,8 @@ require('pry')
 require_relative('../models/club')
 require_relative('../models/player')
 
-Player.delete()
-Club.delete()
+Player.delete_all()
+Club.delete_all()
 
 club1 = Club.new({
   "club_name" => "Liverpool"
@@ -98,7 +98,7 @@ player4.save
 player5.save
 player6.save
 
-binding.pry
+# binding.pry
 
 
 nil

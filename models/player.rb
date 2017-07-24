@@ -3,7 +3,9 @@ require_relative('./club')
 
 class Player
 
-attr_reader :first_name, :second_name, :age, :fit, :club_id
+attr_accessor :first_name, :second_name, :age, :fit, :club_id, :position
+
+attr_reader :id
 
   def initialize(options)
     @first_name = options['first_name']
@@ -33,9 +35,17 @@ attr_reader :first_name, :second_name, :age, :fit, :club_id
     return Player.new(player[0])
   end
 
+  def find_club()
+    return Club.find(@club_id)
+  end
+
   def self.delete()
     sql = "DELETE FROM players;"
     return SqlRunner.run(sql)
+  end
+
+  def format_name
+    return "#{@first_name.capitalize} #{@last_name.capitalize}"
   end
 
 

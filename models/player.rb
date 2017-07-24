@@ -44,9 +44,4 @@ attr_reader :id
     return SqlRunner.run(sql)
   end
 
-  def format_name
-    return "#{@first_name.capitalize} #{@last_name.capitalize}"
-  end
-
-
 end

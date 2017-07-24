@@ -1,0 +1,28 @@
+<h1>Players</h1>
+
+<table>
+  <tr>
+    <th>First Name</th>
+    <th></th>
+    <th>Second Name</th>
+    <th></th>
+    <th>Age</th>
+    <th></th>
+    <th>Fit</th>
+    <th></th>
+    <th>Club</th>
+    <th></th>
+    <th>Positon</th>
+  </tr>
+  <% for player in @players %>
+  <tr>
+    <td><%= player.first_name %></td>
+    <td>|</td>
+    <td><%= player.second_name %></td>
+    <td><%= player.age %></td>
+    <td><%= player.fit %></td>
+    <td><%= player.club_id%></td>
+    <td><%= player.positon %></td
+  </tr>
+  <% end %>
+</table>

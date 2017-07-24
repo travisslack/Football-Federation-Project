@@ -6,7 +6,7 @@ Player.delete_all()
 Club.delete_all()
 
 club1 = Club.new({
-  "club_name" => "Liverpool"
+  "club_name" => "Liverpool FC"
   })
 
 club2 = Club.new({

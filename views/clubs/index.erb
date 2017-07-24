@@ -1,0 +1,13 @@
+<h1>Clubs</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th></th>
+  </tr>
+  <% for club in @clubs %>
+  <tr>
+    <td><a href="/clubs/<%= club.id %>"><%= club.club_name %></a></td>
+  </tr>
+  <% end %>
+</table>

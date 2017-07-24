@@ -1,0 +1,47 @@
+<form method="post" action="/players">
+ <label for="first_name_field">First Name:</label>
+ <input 
+ type="text"
+ name="first_name"
+ id="first_name_field"
+ /> 
+
+ <label for="second_name_field">Second Name:</label>
+ <input 
+ type="text"
+ name="second_name"
+ id="second_name_field"
+ /> 
+
+ Select a club:
+   <select club="club.id">
+     <% for club in @clubs %>
+     <option value="<%= club.id %>"><%= club.club_name %></option>
+     <% end %>
+   </select>
+ </label>
+
+ <label for="age">Age:</label>
+ <input 
+ type="number"
+ name="age"
+ id="age"
+ /> 
+
+ <label for="position_field">Position:</label>
+ <input 
+ type="text"
+ name="position"
+ id="position_field"
+ /> 
+
+ <label for="fit">Fit?:</label>
+ <input 
+ type="boolean"
+ name="fit"
+ id="fit"
+ /> 
+
+<input type="submit" value="Add this Player">
+
+</form>

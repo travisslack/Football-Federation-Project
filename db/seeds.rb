@@ -61,7 +61,7 @@ player3 = Player.new({
   "position" => "Midfielder",
   "age" => 25,
   "fit" => true,
-  "club_id" => club3.id
+  "club_id" => club1.id
   })
 
 player4 = Player.new({
@@ -70,6 +70,24 @@ player4 = Player.new({
   "position" => "Striker",
   "age" => 35,
   "fit" => false,
+  "club_id" => club1.id
+  })
+
+player5 = Player.new({
+  "first_name" => "Paul",
+  "second_name" => "Pogba",
+  "position" => "Midfielder",
+  "age" => 23,
+  "fit" => true,
+  "club_id" => club3.id
+  })
+
+player6 = Player.new({
+  "first_name" => "Kyle",
+  "second_name" => "Walker",
+  "position" => "Defender",
+  "age" => 24,
+  "fit" => true,
   "club_id" => club4.id
   })
 
@@ -77,6 +95,8 @@ player1.save
 player2.save
 player3.save
 player4.save
+player5.save
+player6.save
 
 binding.pry
 

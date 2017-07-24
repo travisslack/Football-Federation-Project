@@ -1,6 +1,6 @@
 <h1>Club Details</h1>
 
-<h2>Name: <%= @club.name %></h2>
+<h2>Name: <%= @club.club_name %></h2>
 
 <hr>
 <table>
@@ -12,22 +12,18 @@
   </tr>
   <tr>
     <th>First Name</th>
-    <th></th>
     <th>Second Name</th>
     <th>Age</th>
     <th>Fit?</th>
     <th>positon</th>
-    <th>Fit?</th>
   </tr>
     <% for player in @players %>
     <tr>
       <td><%= player.first_name %></td>
-      <td>|</td>
       <td><%= player.second_name %></td>
       <td><%= player.age %></td>
       <td><%= player.fit %></td>
-      <td><%= player.club_id %></td>
-      <td><%= player.positon %></td
+      <td><%= player.position %></td>
     </tr>
     <% end %>
   </table>

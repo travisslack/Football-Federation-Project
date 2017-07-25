@@ -16,9 +16,9 @@
   </tr>
   <% for player in @players %>
   <tr>
-    <td><%= player.first_name %></td>
+    <td><a href="/players/<%= player.id %>"><%= player.first_name %></a></td>
     <td>|</td>
-    <td><%= player.second_name %></td>
+    <td><a href="/players/<%= player.id %>"><%= player.second_name %></a></td>
     <td>|</td>
     <td><%= player.age %></td>
     <td>|</td>

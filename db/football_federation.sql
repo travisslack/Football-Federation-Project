@@ -13,5 +13,6 @@ CREATE TABLE players (
   position VARCHAR(255),
   age INT8,
   fit BOOLEAN,
+  photo_url VARCHAR(255),
   club_id INT8 REFERENCES clubs(id)
 );

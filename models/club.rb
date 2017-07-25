@@ -43,4 +43,10 @@ attr_reader :club_name, :id
     return SqlRunner.run(sql)
   end
 
+  def self.destroy(id)
+    sql = "DELETE FROM clubs 
+    WHERE id = #{id};"
+    SqlRunner.run( sql )
+  end
+
 end

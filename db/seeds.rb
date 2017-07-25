@@ -29,12 +29,22 @@ club6 = Club.new({
   "club_name" => "AC Milan"
   })
 
+club7 = Club.new({
+  "club_name" => "Juventus"
+  })
+
+club8 = Club.new({
+  "club_name" => "Real Madrid"
+  })
+
 club1.save
 club2.save
 club3.save
 club4.save
 club5.save
 club6.save
+club7.save
+club8.save
 
 
 player1 = Player.new({
@@ -43,7 +53,7 @@ player1 = Player.new({
   "position" => "Striker",
   "age" => 23,
   "fit" => true,
-  "club_id" => club1.id
+  "club_id" => club7.id
   })
 
 player2 = Player.new({
@@ -52,7 +62,7 @@ player2 = Player.new({
   "position" => "Striker",
   "age" => 30,
   "fit" => true,
-  "club_id" => club2.id
+  "club_id" => club5.id
   })
 
 player3 = Player.new({

@@ -2,7 +2,7 @@ body {
   background: black url('/images/football.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
-  color: papayawhip;
+  color: darkred;
   font-family: 'Merriweather', serif;
   padding: 0px;
   margin: 0px;
@@ -21,7 +21,7 @@ h1 {
 }
 
 a, a:visited {
-  color: papayawhip;
+  color: darkred;
   text-decoration: none;
 }
 

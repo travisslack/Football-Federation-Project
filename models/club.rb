@@ -16,9 +16,8 @@ attr_reader :club_name, :id
   end
 
   def update()
-    sql = "UPDATE clubs SET (club_name) VALUES ('#{@club_name}') RETURNING id;"
+    sql = "UPDATE clubs SET (club_name) = ('#{@club_name}') WHERE id = #{@id};"
     SqlRunner.run(sql)
-    
   end
 
   def players

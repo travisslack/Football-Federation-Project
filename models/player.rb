@@ -24,8 +24,8 @@ attr_reader :id
   end
 
   def update()
-    binding.pry
-    sql = "UPDATE players SET (first_name, second_name, position, age, fit, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', #{@club_id}) WHERE id = #{@id};"
+    sql = "UPDATE players SET (first_name, second_name, position, age, fit, club_id) = ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', #{@club_id}) WHERE id = #{@id};"
+    puts sql
     SqlRunner.run(sql)
   end
 

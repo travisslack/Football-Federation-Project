@@ -29,5 +29,7 @@ post '/clubs/:id/delete' do
   redirect to("/clubs")
 end
 
+Add delete
+
 
 

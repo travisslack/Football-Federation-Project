@@ -8,6 +8,11 @@
   <% for club in @clubs %>
   <tr>
     <td><a href="/clubs/<%= club.id %>"><%= club.club_name %></a></td>
+    <td>
+      <form action="/clubs/<%= club.id %>/delete" method="POST">
+        <input class="btn btn--danger" type="submit" value="delete" />
+      </form>
+    </td>
   </tr>
   <% end %>
 </table>

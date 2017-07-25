@@ -25,7 +25,6 @@ attr_reader :id
 
   def update()
     sql = "UPDATE players SET (first_name, second_name, position, age, fit, club_id) = ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', #{@club_id}) WHERE id = #{@id};"
-    puts sql
     SqlRunner.run(sql)
   end
 

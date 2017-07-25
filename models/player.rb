@@ -8,11 +8,12 @@ attr_accessor :first_name, :second_name, :age, :fit, :club_id, :position, :photo
 attr_reader :id
 
   def initialize(options)
+    true_false = {'t' => true, 'f' => false}
     @first_name = options['first_name']
     @second_name = options['second_name']
     @position = options['position']
     @age = options['age'].to_i
-    @fit = options['fit']
+    @fit = true_false[options['fit']]
     @photo_url = options['photo_url']
     @club_id = options['club_id'].to_i
     @id = options['id'].to_i if options['id']

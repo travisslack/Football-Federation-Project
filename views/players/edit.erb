@@ -38,21 +38,19 @@
   value="<%= @player.position %>"
   /> 
 
-  <label for="fit">Fit?:</label>
+  <label for="fit">Fit?: Fit</label>
   <input 
-  type="boolean"
+  type="radio"
   name="fit"
   id="fit"
-  value="<%= @player.fit %>"
-  /> 
-
-  <label for="photo_url">Image:</label>
+  value='t'
+  />Not Fit
   <input 
-  type="image"
-  name="Photo"
-  id="photo_url"
-  value="<%=  %>"
-  /> 
+  type="radio"
+  name="fit"
+  id="fit"
+  value='f'
+  />  
 
   <input type='submit' value="Submit">
 </form>

@@ -15,7 +15,6 @@ end
 
 get '/players/:id' do
   @player = Player.find(params[:id].to_i)
-  # @clubs = @player.clubs
   erb(:"players/show")
 end
 

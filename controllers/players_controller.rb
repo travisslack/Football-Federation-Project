@@ -13,6 +13,10 @@ get '/players/new' do
   erb(:"players/new")
 end
 
+get '/players/:id' do
+  erb(:"players/show")
+end
+
 post '/players' do
   player = Player.new(params)
   player.save

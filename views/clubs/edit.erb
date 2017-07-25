@@ -1,0 +1,12 @@
+<form method="post" action="/clubs/<%= @club.id %>">
+  <label for="edit_club">Edit a club:
+  </label>
+  <input 
+  type="text"
+  name="club_name"
+  id="edit_club"
+  value="<%= @club.club_name  %>" 
+  />
+
+  <input type="submit" value="Submit">
+</form>

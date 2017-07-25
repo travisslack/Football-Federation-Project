@@ -30,7 +30,7 @@ post '/clubs/:id/delete' do
 end
 
 get '/clubs/:id/edit' do
-  @clubs = Club.all
+  @club = Club.find(params[:id])
   erb(:"/clubs/edit")
 end
 

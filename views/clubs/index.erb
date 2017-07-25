@@ -13,6 +13,11 @@
         <input class="btn btn--danger" type="submit" value="delete" />
       </form>
     </td>
+    <td>
+      <form action="/clubs/<%= club.id %>/edit" method="get">
+        <input class="btn btn--danger" type="submit" value="Edit" />
+      </form>
+    </td>
   </tr>
   <% end %>
 </table>

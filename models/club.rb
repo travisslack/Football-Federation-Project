@@ -38,8 +38,6 @@ attr_reader :club_name, :id
     return Club.new(club[0])
   end
 
-  
-
   def self.delete_all()
     sql = "DELETE FROM clubs;"
     return SqlRunner.run(sql)

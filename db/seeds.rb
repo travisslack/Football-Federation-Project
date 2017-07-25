@@ -53,6 +53,7 @@ player1 = Player.new({
   "position" => "Midfielder",
   "age" => 29,
   "fit" => 't',
+  "nation" => 'Belgium',
   "photo_url" => "http://images.dailystar.co.uk/dynamic/58/photos/991000/620x/53f23d27bbe61_Marou.jpg",
   "club_id" => club7.id
   })
@@ -63,6 +64,7 @@ player2 = Player.new({
   "position" => "Attacker",
   "age" => 30,
   "fit" => 't',
+  "nation" => 'Argentina',
   "photo_url" => "http://cdn.images.express.co.uk/img/dynamic/67/590x/Barcelona-Lionel-Messi-779316.jpg",
   "club_id" => club2.id
   })
@@ -73,6 +75,7 @@ player3 = Player.new({
   "position" => "Midfielder",
   "age" => 25,
   "fit" => 't',
+  "nation" => 'Brazil',
   "photo_url" => "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p84583.png",
   "club_id" => club1.id
   })
@@ -83,6 +86,7 @@ player4 = Player.new({
   "position" => "Attacker",
   "age" => 37,
   "fit" => 'f',
+  "nation" => 'Brazil',
   "photo_url" => "https://upload.wikimedia.org/wikipedia/gd/e/e6/Ronaldinho01.jpg",
   "club_id" => club2.id
   })
@@ -93,6 +97,7 @@ player5 = Player.new({
   "position" => "Midfielder",
   "age" => 23,
   "fit" => 't',
+  "nation" => 'France',
   "photo_url" => "https://platform-static-files.s3.amazonaws.com/premierleague/photos/players/250x250/p74208.png",
   "club_id" => club3.id
   })
@@ -103,6 +108,7 @@ player6 = Player.new({
   "position" => "Defender",
   "age" => 29,
   "fit" => 't',
+  "nation" => 'Brazil',
   "photo_url" => "https://images.genius.com/d73676955f7778b490f79e4bd8cbf4b7.750x1000x1.jpg",
   "club_id" => club6.id
   })
@@ -113,6 +119,7 @@ player7 = Player.new({
   "position" => "Defender",
   "age" => 31,
   "fit" => 't',
+  "nation" => 'Italy',
   "photo_url" => "https://i.ytimg.com/vi/zsabyVAbueQ/hqdefault.jpg",
   "club_id" => club6.id
   })
@@ -123,6 +130,7 @@ player8 = Player.new({
   "position" => "Attacker",
   "age" => 31,
   "fit" => 't',
+  "nation" => 'Portugal',
   "photo_url" => "http://static.goal.com/4323400/4323432_news.jpg",
   "club_id" => club8.id
   })

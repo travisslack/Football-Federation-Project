@@ -5,7 +5,7 @@
   name="first_name"
   id="first-name-field"
   value="<%= @player.first_name %>"
-  />
+  /><br>
 
   <label for="second-name-field">Second Name:</label>
   <input
@@ -13,14 +13,14 @@
   name="second_name"
   id="second-name-field"
   value="<%= @player.second_name %>"
-  />
+  /><br>
 
   <label for="team-selection">Select a team:</label>
   <select name="club_id" id="team-selection">
     <% for club in @clubs %>
     <option value="<%= club.id %>" <%="selected" if @player.club_id == club.id %>><%= club.club_name %></option>
     <% end %>
-  </select>
+  </select><br>
 
   <label for="age">Age:</label>
   <input 
@@ -28,7 +28,7 @@
   name="age"
   id="age"
   value="<%= @player.age %>"
-  /> 
+  /><br>
 
   <label for="position_field">Position:</label>
   <input 
@@ -36,7 +36,7 @@
   name="position"
   id="position_field"
   value="<%= @player.position %>"
-  /> 
+  /><br>
 
   <label for="fit">Fit?: Fit</label>
   <input 
@@ -50,7 +50,7 @@
   name="fit"
   id="fit"
   value='f'
-  />  
+  /> <br>
 
   <label for="nation_field">Place of Birth:</label>
   <input 
@@ -58,7 +58,7 @@
   name="nation"
   id="nation_field"
   value="<%= @player.nation %>"
-  /> 
+  /><br>
 
   <label for="photo_url_field">Photo:</label>
   <input
@@ -66,7 +66,7 @@
   name="photo_url"
   id="photo_url_field"
   value="<%= @player.photo_url  %>"
-  />
+  /><br>
 
 
 

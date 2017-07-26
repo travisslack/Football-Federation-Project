@@ -103,13 +103,13 @@ player5 = Player.new({
   })
 
 player6 = Player.new({
-  "first_name" => "Thiago",
-  "second_name" => "Silva",
-  "position" => "Defender",
-  "age" => 29,
+  "first_name" => "Gianluigi",
+  "second_name" => "Donnarumma",
+  "position" => "Goalkeeper",
+  "age" => 18,
   "fit" => 't',
-  "nation" => 'Brazil',
-  "photo_url" => "https://images.genius.com/d73676955f7778b490f79e4bd8cbf4b7.750x1000x1.jpg",
+  "nation" => 'Italy',
+  "photo_url" => "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Gianluigi_Donnarumma_%2831895135436%29.jpg/220px-Gianluigi_Donnarumma_%2831895135436%29.jpg",
   "club_id" => club6.id
   })
 

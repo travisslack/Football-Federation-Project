@@ -55,7 +55,11 @@ main {
 }
 
 #content {
-  border-left: 1px solid darkred;
-  padding-left: 25px;
+  border-width: 3px;
+  border-style: solid;
+  border-color: black;
+  color: #1b2727 ;
+  background-color: white;
+  opacity: 0.6;
 }
 

@@ -20,6 +20,10 @@ attr_reader :id
     @id = options['id'].to_i if options['id']
   end
 
+  def pretty_name()
+    return "#{@first_name} #{@second_name}"
+  end
+  
   def save()
     sql = "INSERT INTO players (first_name, second_name, position, age, fit, nation, photo_url, club_id) VALUES ('#{@first_name}', '#{@second_name}', '#{@position}', #{@age}, '#{@fit}', '#{@nation}', '#{@photo_url}', #{@club_id}) RETURNING id;"
     player = SqlRunner.run(sql)

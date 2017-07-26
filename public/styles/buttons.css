@@ -2,27 +2,19 @@
   border:0px none;
   border-radius: 3%;
   padding: 8px 12px;
-  color: papayawhip;
+  color: green;
   cursor:pointer;
-  font-family: 'Special Elite', cursive;
+  font-family: 'Helvetica', cursive;
+  -webkit-transition-duration: 0.4s; transition-duration: 0.4s;
 }
 
-.btn--danger {
-  background-color: darkred;
-}
+.btn:hover{
+  background-color: green;
+  color: white;
 
-.btn--danger:hover {
-  background-color: #730000;
-}
-
-.btn--action:hover {
-  background-color: #495C27;
-}
-
-.btn--action {
-  background-color: darkolivegreen;
 }
 
 .btn--wrapper {
   margin: 0px 0px 30px 0px;
 }
+

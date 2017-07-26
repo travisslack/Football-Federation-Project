@@ -8,6 +8,8 @@ select {
  padding: 5px 35px 5px 5px;
  margin: 15px 0;
  font-size: 0.8em;
+ -webkit-appearance: none;
+ background: url('/images/football_little.png') 96% / 15% no-repeat papayawhip;
  font-family: 'Merriweather', serif;
  border: 1px solid #eee;
  display: block;

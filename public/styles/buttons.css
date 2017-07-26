@@ -1,11 +1,11 @@
 .btn {
   border:0px none;
-  border-radius: 3%;
+  border-radius: 25px;
   padding: 8px 12px;
   color: green;
   cursor:pointer;
   font-family: 'Helvetica', cursive;
-  -webkit-transition-duration: 0.4s; transition-duration: 0.4s;
+  -webkit-transition-duration: 0.5s; transition-duration: 0.5s;
 }
 
 .btn:hover{
@@ -13,8 +13,3 @@
   color: white;
 
 }
-
-.btn--wrapper {
-  margin: 0px 0px 30px 0px;
-}
-

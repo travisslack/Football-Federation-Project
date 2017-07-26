@@ -1,9 +1,9 @@
 body {
   background: black url('/images/football.jpg');
-  background-size: 100%;
+  background-size: 150%;
   color: black;
   font-family: 'Helvetica', serif;
-  padding: 0px;
+  padding: 20px;
   margin: 0px;
 }
 
@@ -55,7 +55,8 @@ main {
 }
 
 #content {
-  border-left: 10px green;
+  border-left: 50px green;
   padding-left: 25px;
 }
+
 

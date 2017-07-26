@@ -41,6 +41,12 @@ attr_reader :id
     return players.map{ |player| Player.new(player)}
   end
 
+  def self.find_by_nationality(nation)
+    sql = "SELECT * FROM players WHERE nation = '#{nation}'"
+    players = SqlRunner.run(sql)
+    return players.map{ |player| Player.new( player )}
+  end
+
   def self.find(id)
     sql = "SELECT * FROM players WHERE id = #{id}"
     player = SqlRunner.run(sql)

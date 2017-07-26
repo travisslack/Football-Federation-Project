@@ -1,0 +1,52 @@
+
+
+
+
+<form action="/players/search", method="get">
+  <input type="text" name="nation">
+  <input type="submit">
+</form>
+
+<h1>Players</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <td>|</td>
+    <th>Age</th>
+    <td>|</td>
+    <th>Fit?</th>
+    <td>|</td>
+    <th>Place of Birth</th>
+    <td>|</td>
+    <th>Club</th>
+    <td>|</td>
+    <th>Positon</th>
+  </tr>
+  <% for player in @players %>
+  <tr>
+    <td><a href="/players/<%= player.id %>"> <%= player.pretty_name %></a></td>
+    <td>|</td>
+    <td><%= player.age %></td>
+    <td>|</td>
+    <td><%= player.fit ? "Yes" : "No" %></td>
+    <td>|</td>
+    <td><%= player.nation %></td>
+    <td>|</td>
+    <td><%= player.find_club.club_name %></td>
+    <td>|</td>
+    <td><%= player.position %></td>
+    <td>
+      <form action="/players/<%= player.id %>/delete" method="POST">
+        <input class="btn" type="submit" value="delete" />
+      </form>
+    </td>
+    <td>
+      <form action="/players/<%= player.id %>/edit" method="get">
+        <input class="btn" type="submit" value="Edit" />
+      </form>
+    </td>
+  </tr>
+  
+  <% end %>
+</table>

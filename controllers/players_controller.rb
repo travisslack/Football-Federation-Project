@@ -13,6 +13,11 @@ get '/players/new' do
   erb(:"players/new")
 end
 
+get '/players/search' do
+  @players = Player.find_by_nationality(params['nation']) 
+  erb(:"/players/search")
+end
+
 get '/players/:id' do
   @player = Player.find(params[:id].to_i)
   erb(:"players/show")
@@ -40,6 +45,7 @@ post '/players/:id' do
   player.update
   redirect to("/players")
 end
+
 
 
 

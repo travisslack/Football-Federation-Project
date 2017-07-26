@@ -144,7 +144,7 @@ player6.save
 player7.save
 player8.save
 
-# binding.pry
+binding.pry
 
 
 nil

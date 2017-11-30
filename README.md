@@ -2,6 +2,19 @@
 
 This is a Ruby Sinatra CRUD web app using a RESTful API and PostgreSQL. TDD to be used for all non SQL methods.
 
+This project was to consolidate:
+
+•	Ruby Fundamentals
+
+•	TDD(where appropriate)
+
+•	OOP
+
+•	Web Programming
+
+•	Databases with CRUD actions
+
+
 MVP:
 
 •	A list of all their players and age

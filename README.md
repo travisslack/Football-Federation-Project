@@ -12,7 +12,7 @@ MVP:
 
 •	List all the clubs and their players
 
-Possible Extensions
+Possible Extensions:
 
 •	CRUD actions for players/clubs
 

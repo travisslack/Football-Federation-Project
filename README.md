@@ -33,5 +33,4 @@ Possible Extensions:
 
 •	Search for players by nationality/position
 
-•	Any other ideas you might come up with
 
